@@ -1,98 +1,97 @@
-#include <stdio.h> //inclui a biblioteca padrão de entrada e saída que inclui funções printf e scanf.
+#include <stdio.h> // Inclui a biblioteca padrão para entrada e saída de dados (permite usar printf e scanf)
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Aluno: Matheus Henrique Sabino - Nível Novato: Cadastro Básico - Revisado
+int main() { // Início da execução do programa
+    char estado1[3]; // Guarda o estado da primeira carta (ex: "SP")
+    char codigo1[5]; // Guarda o código da primeira carta (ex: "SP01")
+    char cidade1[50]; // Guarda o nome da cidade da primeira carta
+    int populacao1; // Guarda a população da primeira carta
+    float area1; // Guarda a área da primeira carta
+    float pib1; // Guarda o PIB da primeira carta
+    int pontosturisticos1; // Guarda o número de pontos turísticos da primeira carta
+    float densidade1; // Guarda a densidade populacional da primeira carta
+    float pibPerCapita1; // Guarda o PIB per capita da primeira carta
 
-int main() { //inicio da execução do programa
-    //informações da primeira carta
-    char estado1[3]; //declarar array de caracteres para o estado da primeira carta (ex: "SP")
-    char codigo1[5]; //declarar array de caracteres para o código da primeira carta (ex: "A01")
-    char cidade1[50]; //declarar array de caracteres para o nome da cidade da primeira carta
-    int populacao1; //declarar variavel inteira da população da primeira carta
-    float area1; //declarar variavel flutuante da area da primeira carta
-    float pib1; //declarar variavel flutuante do PIB da primeira carta
-    int pontosturisticos1; //declarar variavel inteira do numero de pontos turisticos da primeira carta
+    char estado2[3]; // Guarda o estado da segunda carta (ex: "RJ")
+    char codigo2[5]; // Guarda o código da segunda carta (ex: "RJ02")
+    char cidade2[50]; // Guarda o nome da cidade da segunda carta
+    int populacao2; // Guarda a população da segunda carta
+    float area2; // Guarda a área da segunda carta
+    float pib2; // Guarda o PIB da segunda carta
+    int pontosturisticos2; // Guarda o número de pontos turísticos da segunda carta
+    float densidade2; // Guarda a densidade populacional da segunda carta
+    float pibPerCapita2; // Guarda o PIB per capita da segunda carta
 
-    //informações da segunda carta
-    char estado2[3]; //declarar array de caracteres para o estado da segunda carta
-    char codigo2[5]; //declarar array de caracteres para o código da segunda carta
-    char cidade2[50]; //declarar array de caracteres para o nome da cidade da segunda carta
-    int populacao2; //declarar variavel inteira da população da segunda carta
-    float area2; //declarar variavel flutuante da area da segunda carta
-    float pib2; //declarar variavel flutuante do PIB da segunda carta
-    int pontosturisticos2; //declarar variavel inteira do numero de pontos turisticos da segunda carga
+    // Cadastro dos dados da primeira carta
+    printf("-----Cadastro da Primeira Carta-----\n"); // Mostra mensagem de início do cadastro
+    printf("Digite o estado da primeira carta (ex: SP): "); // Pede para digitar o estado
+    scanf("%2s", estado1); // Lê o estado digitado
+    printf("Digite o código da primeira carta (ex: SP01): "); // Pede para digitar o código
+    scanf("%4s", codigo1); // Lê o código digitado
+    printf("Digite o nome da cidade da primeira carta: "); // Pede para digitar o nome da cidade
+    scanf("%49s", cidade1); // Lê o nome da cidade digitado
+    printf("Digite a população da primeira carta: "); // Pede para digitar a população
+    scanf("%d", &populacao1); // Lê a população digitada
+    printf("Digite a área da primeira carta (km²): "); // Pede para digitar a área
+    scanf("%f", &area1); // Lê a área digitada
+    printf("Digite o PIB da primeira carta: "); // Pede para digitar o PIB
+    scanf("%f", &pib1); // Lê o PIB digitado
+    printf("Digite o número de pontos turísticos da primeira carta: "); // Pede para digitar o número de pontos turísticos
+    scanf("%d", &pontosturisticos1); // Lê o número de pontos turísticos digitado
 
-    //inserir valores primeira carta
-    printf("-----Insira as informações da primeira carta----- \n"); //instruir que as informações serão da primeria carta e pular linha
+    // Calcula a densidade populacional da primeira carta (população dividido pela área)
+    densidade1 = populacao1 / area1;
+    // Calcula o PIB per capita da primeira carta (PIB dividido pela população)
+    pibPerCapita1 = pib1 / populacao1;
 
-    printf("Digite o estado da primeira carta (ex: SP): "); //solicita digitar o estado
-    scanf("%2s", estado1); //armazena variavel do tipo string, digitada no teclado, em estado1
+    // Cadastro dos dados da segunda carta
+    printf("-----Cadastro da Segunda Carta-----\n"); // Mostra mensagem de início do cadastro
+    printf("Digite o estado da segunda carta (ex: RJ): "); // Pede para digitar o estado
+    scanf("%2s", estado2); // Lê o estado digitado
+    printf("Digite o código da segunda carta (ex: RJ02): "); // Pede para digitar o código
+    scanf("%4s", codigo2); // Lê o código digitado
+    printf("Digite o nome da cidade da segunda carta: "); // Pede para digitar o nome da cidade
+    scanf("%49s", cidade2); // Lê o nome da cidade digitado
+    printf("Digite a população da segunda carta: "); // Pede para digitar a população
+    scanf("%d", &populacao2); // Lê a população digitada
+    printf("Digite a área da segunda carta (km²): "); // Pede para digitar a área
+    scanf("%f", &area2); // Lê a área digitada
+    printf("Digite o PIB da segunda carta: "); // Pede para digitar o PIB
+    scanf("%f", &pib2); // Lê o PIB digitado
+    printf("Digite o número de pontos turísticos da segunda carta: "); // Pede para digitar o número de pontos turísticos
+    scanf("%d", &pontosturisticos2); // Lê o número de pontos turísticos digitado
 
-    printf("Digite o código da primeira carta (ex: A01): "); //solicita digitar o código
-    scanf("%4s", codigo1); //armazena variavel do tipo string, digitada no teclado, em codigo1
+    // Calcula a densidade populacional da segunda carta (população dividido pela área)
+    densidade2 = populacao2 / area2;
+    // Calcula o PIB per capita da segunda carta (PIB dividido pela população)
+    pibPerCapita2 = pib2 / populacao2;
 
-    printf("Digite o nome da cidade da primeira carta: "); //solicita digitar o nome da cidade
-    scanf("%49s", cidade1); //armazena variavel do tipo string, digitada no teclado, em cidade1
+    // Exibe todos os dados cadastrados das cartas
+    printf("-----Exibir Dados Cadastrados-----\n"); // Mostra mensagem de exibição dos dados
 
-    printf("Digite a população da primeira carta: "); //solicita digitar a população
-    scanf("%d", &populacao1); //armazena variavel inteira, digitada no teclado, em populacao1
+    // Exibe os dados da primeira carta
+    printf("-----Primeira Carta-----\n"); // Mostra título da primeira carta
+    printf("Estado: %s\n", estado1); // Mostra o estado
+    printf("Código: %s\n", codigo1); // Mostra o código
+    printf("Cidade: %s\n", cidade1); // Mostra o nome da cidade
+    printf("População: %d\n", populacao1); // Mostra a população
+    printf("Área: %.2f km²\n", area1); // Mostra a área
+    printf("PIB: %.2f bilhões de reais\n", pib1); // Mostra o PIB
+    printf("Número de Pontos Turísticos: %d\n", pontosturisticos1); // Mostra o número de pontos turísticos
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1); // Mostra a densidade populacional
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1); // Mostra o PIB per capita
 
-    printf("Digite a área da primeira carta (km²): "); //solicita digitar a área
-    scanf("%f", &area1); //armazena variavel flutuante, digitada no teclado, em area1
+    // Exibe os dados da segunda carta
+    printf("-----Segunda Carta-----\n"); // Mostra título da segunda carta
+    printf("Estado: %s\n", estado2); // Mostra o estado
+    printf("Código: %s\n", codigo2); // Mostra o código
+    printf("Cidade: %s\n", cidade2); // Mostra o nome da cidade
+    printf("População: %d\n", populacao2); // Mostra a população
+    printf("Área: %.2f km²\n", area2); // Mostra a área
+    printf("PIB: %.2f bilhões de reais\n", pib2); // Mostra o PIB
+    printf("Número de Pontos Turísticos: %d\n", pontosturisticos2); // Mostra o número de pontos turísticos
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2); // Mostra a densidade populacional
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2); // Mostra o PIB per capita
 
-    printf("Digite o PIB da primeira carta: "); //solicita digitar o PIB
-    scanf("%f", &pib1); //armazena variavel flutuante, digitada no teclado, em pib1
-
-    printf("Digite o número de pontos turísticos da primeira carta: "); //solicita digitar o numero de pontos turisticos
-    scanf("%d", &pontosturisticos1); //armazena variavel inteira, digitada no teclado, em pontosturisticos1
-
-    //inserir valores segunda carta
-    printf("-----Insira as informações da segunda carta----- \n"); //instruir que as informações serão da segunda carta e pular linha
-
-    printf("Digite o estado da segunda carta (ex: RJ): "); //solicita digitar o estado
-    scanf("%2s", estado2); //armazena variavel do tipo string, digitada no teclado, em estado2
-
-    printf("Digite o código da segunda carta (ex: B02): "); //solicita digitar o código
-    scanf("%4s", codigo2); //armazena variavel do tipo string, digitada no teclado, em codigo2
-
-    printf("Digite o nome da cidade da segunda carta: "); //solicita digitar o nome da cidade
-    scanf("%49s", cidade2); //armazena variavel do tipo string, digitada no teclado, em cidade2
-
-    printf("Digite a população da segunda carta: "); //solicita digitar a população
-    scanf("%d", &populacao2); //armazena variavel inteira, digitada no teclado, em populacao2
-
-    printf("Digite a área da segunda carta (km²): "); //solicita digitar a área
-    scanf("%f", &area2); //armazena variavel flutuante, digitada no teclado, em area2
-
-    printf("Digite o PIB da segunda carta: "); //solicita digitar o PIB
-    scanf("%f", &pib2); //armazena variavel flutuante, digitada no teclado, em pib2
-
-    printf("Digite o número de pontos turísticos da segunda carta: "); //solicita digitar o numero de pontos turisticos
-    scanf("%d", &pontosturisticos2); //armazena variavel inteira, digitada no teclado, em pontosturisticos2
-
-    printf("-----Exibir Dados Cadastrados-----\n"); //exibir dados cadastrados organizadamente
-
-    printf("-----Primeira Carta-----\n");
-    printf("Estado: %s\n", estado1); //exibir o estado da primeira carta
-    printf("Código: %s\n", codigo1); //exibir o código da primeira carta
-    printf("Cidade: %s\n", cidade1); //exibir o nome da cidade da primeira carta
-    printf("A população da primeira carta é: %d\n", populacao1); //exibir a população da primeira carta
-    printf("A área da primeira carta é: %.2f km²\n", area1); //exibir a área da primeira carta com duas casas decimais
-    printf("O PIB da primeira carta é: R$ %.2f\n", pib1); //exibir o PIB da primeira carta com duas casas decimais
-    printf("O número de pontos turísticos da primeira carta é: %d\n", pontosturisticos1); //exibir o numero de pontos turisticos da primeira carta
-
-    printf("-----Segunda Carta-----\n");
-    printf("Estado: %s\n", estado2); //exibir o estado da segunda carta
-    printf("Código: %s\n", codigo2); //exibir o código da segunda carta
-    printf("Cidade: %s\n", cidade2); //exibir o nome da cidade da segunda carta
-    printf("A população da segunda carta é: %d\n", populacao2); //exibir a população da segunda carta
-    printf("A área da segunda carta é: %.2f km²\n", area2); //exibir a área da segunda carta com duas casas decimais
-    printf("O PIB da segunda carta é: R$ %.2f\n", pib2); //exibir o PIB da segunda carta com duas casas decimais
-    printf("O número de pontos turísticos da segunda carta é: %d\n", pontosturisticos2); //exibir o numero de pontos turisticos da segunda carta
-
-    //finalizar o programa
-    printf("-----Fim do Cadastro-----\n"); //exibir mensagem de fim do cadastro
-
-    return 0;
+    printf("-----Fim do Cadastro-----\n"); // Mostra mensagem de fim do cadastro
+    return 0; // Finaliza o programa
 }
