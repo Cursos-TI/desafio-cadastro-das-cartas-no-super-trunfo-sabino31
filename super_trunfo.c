@@ -125,5 +125,28 @@ int main() { // Início da execução do programa
     printf("PIB per Capita: %.2f reais\n", pibPerCapita2); // Mostra o PIB per capita calculado.
 
     printf("-----Fim do Cadastro-----\n"); // Mensagem final indicando o fim do processo.
+
+    // Cálculo do Super Poder para cada carta
+    // Super Poder = população + área + PIB + pontos turísticos + PIB per capita + (1/densidade populacional)
+    // Todos os termos devem ser somados como float
+    float superPoder1, superPoder2;
+    superPoder1 = (float)populacao1 + area1 + pib1 + (float)pontosturisticos1 + pibPerCapita1 + (densidade1 != 0.0f ? (1.0f/densidade1) : 0.0f);
+    superPoder2 = (float)populacao2 + area2 + pib2 + (float)pontosturisticos2 + pibPerCapita2 + (densidade2 != 0.0f ? (1.0f/densidade2) : 0.0f);
+
+    // Exibe os Super Poderes
+    printf("Super Poder da Primeira Carta: %.2f\n", superPoder1);
+    printf("Super Poder da Segunda Carta: %.2f\n", superPoder2);
+
+    // Comparação dos atributos
+    printf("\nComparação de Cartas:\n");
+    printf("População: Carta 1 venceu (%d)\n", (populacao1 > populacao2) ? 1 : 0);
+    printf("Área: Carta 1 venceu (%d)\n", (area1 > area2) ? 1 : 0);
+    printf("PIB: Carta 1 venceu (%d)\n", (pib1 > pib2) ? 1 : 0);
+    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", (pontosturisticos1 > pontosturisticos2) ? 1 : 0);
+    // Para densidade populacional, vence o menor valor
+    printf("Densidade Populacional: Carta 1 venceu (%d)\n", (densidade1 < densidade2) ? 1 : 0);
+    printf("PIB per Capita: Carta 1 venceu (%d)\n", (pibPerCapita1 > pibPerCapita2) ? 1 : 0);
+    printf("Super Poder: Carta 1 venceu (%d)\n", (superPoder1 > superPoder2) ? 1 : 0);
+
     return 0; // Retorna 0 para indicar que o programa terminou corretamente.
 }
