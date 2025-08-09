@@ -137,16 +137,75 @@ int main() { // Início da execução do programa
     printf("Super Poder da Primeira Carta: %.2f\n", superPoder1);
     printf("Super Poder da Segunda Carta: %.2f\n", superPoder2);
 
-    // Comparação dos atributos
-    printf("\nComparação de Cartas:\n");
-    printf("População: Carta 1 venceu (%d)\n", (populacao1 > populacao2) ? 1 : 0);
-    printf("Área: Carta 1 venceu (%d)\n", (area1 > area2) ? 1 : 0);
-    printf("PIB: Carta 1 venceu (%d)\n", (pib1 > pib2) ? 1 : 0);
-    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", (pontosturisticos1 > pontosturisticos2) ? 1 : 0);
-    // Para densidade populacional, vence o menor valor
-    printf("Densidade Populacional: Carta 1 venceu (%d)\n", (densidade1 < densidade2) ? 1 : 0);
-    printf("PIB per Capita: Carta 1 venceu (%d)\n", (pibPerCapita1 > pibPerCapita2) ? 1 : 0);
-    printf("Super Poder: Carta 1 venceu (%d)\n", (superPoder1 > superPoder2) ? 1 : 0);
+    // Comparação de todos os atributos numéricos
+    printf("\n===== Comparação de Cartas =====\n");
+
+
+    // 1. População
+    printf("\nComparação de cartas (Atributo: População):\n");
+    printf("Carta 1 - %s (%s): %lu\n", cidade1, estado1, populacao1);
+    printf("Carta 2 - %s (%s): %lu\n", cidade2, estado2, populacao2);
+    if (populacao1 > populacao2)
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    else if (populacao2 > populacao1)
+        printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    else
+        printf("Resultado: Empate!\n");
+
+    // 2. Área
+    printf("\nComparação de cartas (Atributo: Área):\n");
+    printf("Carta 1 - %s (%s): %.2f km²\n", cidade1, estado1, area1);
+    printf("Carta 2 - %s (%s): %.2f km²\n", cidade2, estado2, area2);
+    if (area1 > area2)
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    else if (area2 > area1)
+        printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    else
+        printf("Resultado: Empate!\n");
+
+    // 3. PIB
+    printf("\nComparação de cartas (Atributo: PIB):\n");
+    printf("Carta 1 - %s (%s): %.2f bilhões de reais\n", cidade1, estado1, pib1);
+    printf("Carta 2 - %s (%s): %.2f bilhões de reais\n", cidade2, estado2, pib2);
+    if (pib1 > pib2)
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    else if (pib2 > pib1)
+        printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    else
+        printf("Resultado: Empate!\n");
+
+    // 4. Pontos Turísticos
+    printf("\nComparação de cartas (Atributo: Pontos Turísticos):\n");
+    printf("Carta 1 - %s (%s): %d\n", cidade1, estado1, pontosturisticos1);
+    printf("Carta 2 - %s (%s): %d\n", cidade2, estado2, pontosturisticos2);
+    if (pontosturisticos1 > pontosturisticos2)
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    else if (pontosturisticos2 > pontosturisticos1)
+        printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    else
+        printf("Resultado: Empate!\n");
+
+    // 5. Densidade Populacional (menor vence)
+    printf("\nComparação de cartas (Atributo: Densidade Populacional):\n");
+    printf("Carta 1 - %s (%s): %.2f hab/km²\n", cidade1, estado1, densidade1);
+    printf("Carta 2 - %s (%s): %.2f hab/km²\n", cidade2, estado2, densidade2);
+    if (densidade1 < densidade2)
+        printf("Resultado: Carta 1 (%s) venceu! (menor densidade)\n", cidade1);
+    else if (densidade2 < densidade1)
+        printf("Resultado: Carta 2 (%s) venceu! (menor densidade)\n", cidade2);
+    else
+        printf("Resultado: Empate!\n");
+
+    // 6. PIB per Capita
+    printf("\nComparação de cartas (Atributo: PIB per Capita):\n");
+    printf("Carta 1 - %s (%s): %.2f reais\n", cidade1, estado1, pibPerCapita1);
+    printf("Carta 2 - %s (%s): %.2f reais\n", cidade2, estado2, pibPerCapita2);
+    if (pibPerCapita1 > pibPerCapita2)
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    else if (pibPerCapita2 > pibPerCapita1)
+        printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    else
+        printf("Resultado: Empate!\n");
 
     return 0; // Retorna 0 para indicar que o programa terminou corretamente.
 }
